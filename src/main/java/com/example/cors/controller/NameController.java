@@ -15,10 +15,10 @@ public class NameController {
     @PostMapping("/reverse-name")
     public String getReverseName(@RequestParam String name) {
 
-        StringBuilder reversedString = new StringBuilder();
-        reversedString.append(name);
-        reversedString.reverse();
+        StringBuilder stringToReverse = new StringBuilder();
+        stringToReverse.append(name);
+        stringToReverse.reverse();
 
-        return reversedString.toString();
+        return stringToReverse.toString();
     }
 }
