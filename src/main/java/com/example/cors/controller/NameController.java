@@ -5,8 +5,10 @@ import org.springframework.web.bind.annotation.*;
 @RestController
 @RequestMapping("/v1")
 public class NameController {
-
-    @CrossOrigin("http://localhost:8080")
+    
+    //@CrossOrigin serve a non far bloccare le chiamate che provengono
+    //da un dominio diverso da quello in cui gira la mia API, in questo caso localhost:3000
+    @CrossOrigin("http://localhost:3000")
     @GetMapping("/name")
     public String getName(@RequestParam String name) {
         return name;
